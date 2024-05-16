@@ -1,13 +1,13 @@
-package com.example.jaeilbanksystem;
+package com.example.bankserversystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JaeilBankSystemApplication {
+public class BankServerSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JaeilBankSystemApplication.class, args);
+        SpringApplication.run(BankServerSystemApplication.class, args);
     }
 
 }
