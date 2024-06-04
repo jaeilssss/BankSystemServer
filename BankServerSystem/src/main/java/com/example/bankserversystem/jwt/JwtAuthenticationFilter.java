@@ -5,6 +5,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.java.Log;
 import org.apache.catalina.util.StringUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,7 +32,7 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
             FilterChain filterChain
     ) throws IOException, ServletException {
             String token = resolveToken((HttpServletRequest) servletRequest);
-
+            System.out.println("JwtAuthenticationFilter !!! ");
             if(token != null && jwtProviders.validateToken(token)) {
                 Authentication authentication = jwtProviders.getAuthentication(token);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -40,7 +41,7 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
     }
 
     public String resolveToken(HttpServletRequest request) {
-        String bearerToken = request.getHeader(AUTHORITIES_KEY);
+        String bearerToken = request.getHeader("Authorization");
         if(StringUtils.hasText(bearerToken) &&
             bearerToken.startsWith("Bearer")) {
             return bearerToken.substring(7);
