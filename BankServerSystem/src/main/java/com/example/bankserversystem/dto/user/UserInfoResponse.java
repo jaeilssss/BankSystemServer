@@ -2,7 +2,6 @@ package com.example.bankserversystem.dto.user;
 
 import com.example.bankserversystem.entity.user.UserInfo;
 import lombok.*;
-import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 
@@ -25,7 +24,8 @@ public class UserInfoResponse {
 
     public String phoneNumber;
 
-    public static UserInfoResponse getUserResponseFromUserInfo(UserInfo userInfo) {
+
+    public static UserInfoResponse makeResponseFromEntity(UserInfo userInfo) {
         return UserInfoResponse.builder()
                 .userId(userInfo.getUserId())
                 .email(userInfo.getEmail())

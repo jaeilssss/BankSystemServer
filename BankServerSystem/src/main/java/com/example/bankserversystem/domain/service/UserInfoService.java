@@ -11,10 +11,7 @@ import com.example.bankserversystem.exception.user.UserInfoException;
 import com.example.bankserversystem.jwt.JwtProviders;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -47,12 +44,12 @@ public class UserInfoService {
 
         UserInfo createdUserInfo = createEntityFromRequest(userInfoRequest);
         createdUserInfo.setPassword(passwordEncode);
-        return UserInfoResponse.getUserResponseFromUserInfo(userInfoRepository.save(createdUserInfo));
+        return UserInfoResponse.makeResponseFromEntity(userInfoRepository.save(createdUserInfo));
     }
 
     @Transactional
     public UserInfoResponse getUserInfoDetail(Long userId) {
-        return UserInfoResponse.getUserResponseFromUserInfo(getUserInfo(userId));
+        return UserInfoResponse.makeResponseFromEntity(getUserInfo(userId));
     }
 
     @Transactional
@@ -64,7 +61,7 @@ public class UserInfoService {
         userInfo.setPhoneNumber(userInfo.getPhoneNumber());
         userInfo.setPhoneNumber(userInfo.getPhoneNumber());
 
-        return UserInfoResponse.getUserResponseFromUserInfo(userInfo);
+        return UserInfoResponse.makeResponseFromEntity(userInfo);
     }
 
 
