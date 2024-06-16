@@ -33,7 +33,9 @@ public class SecurityConfig {
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return web -> web.ignoring()
-                .requestMatchers("/api/user/login");
+                .requestMatchers("/swagger-resources")
+                .requestMatchers("/swagger")
+                .requestMatchers("/swagger-ui/index.html");
     }
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
