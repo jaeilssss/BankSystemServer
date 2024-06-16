@@ -38,7 +38,9 @@ public class DepositService {
     private Deposit createDepositFromCreateDeposit(CreateDeposit createDeposit) {
         return Deposit.builder()
                 .depositName(createDeposit.getDepositName())
-
+                .interestRate(createDeposit.getInterestRate())
+                .depositCreditCondition(createDeposit.getDepositCreditCondition())
+                .tag(createDeposit.getTag())
                 .build();
     }
 

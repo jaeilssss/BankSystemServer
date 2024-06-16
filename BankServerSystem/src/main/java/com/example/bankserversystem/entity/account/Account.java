@@ -1,6 +1,7 @@
-package com.example.bankserversystem.entity.deposit;
+package com.example.bankserversystem.entity.account;
 
 
+import com.example.bankserversystem.entity.deposit.Deposit;
 import com.example.bankserversystem.entity.user.UserInfo;
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,12 +27,12 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JoinColumn(name = "user_id")
-    @ManyToOne
+    @JoinColumn
+    @ManyToOne(fetch = FetchType.LAZY)
     private UserInfo userInfo;
 
-    @JoinColumn(name="deposit_id")
-    @ManyToOne
+    @JoinColumn
+    @ManyToOne(fetch = FetchType.LAZY)
     private Deposit deposit;
 
     @Column(nullable = false)
@@ -39,7 +40,7 @@ public class Account {
     @Column(nullable = false)
     private String accountType;
 
-    private BigDecimal totalDeposit;
+    private int totalDeposit;
 
     @CreatedDate
     private LocalDateTime createdAt;
