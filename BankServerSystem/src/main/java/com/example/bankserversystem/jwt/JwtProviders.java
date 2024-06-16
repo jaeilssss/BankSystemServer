@@ -66,7 +66,6 @@ public class JwtProviders implements InitializingBean {
 
     public boolean validateToken(String token) {
         try {
-            System.out.println("token : "+token);
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
             return true;
         } catch (io.jsonwebtoken.security.SecurityException |
@@ -96,7 +95,7 @@ public class JwtProviders implements InitializingBean {
                         .collect(Collectors.toList());
 
         // UserDetails principal = new
-        return new UsernamePasswordAuthenticationToken(null, "", authorities);
+        return new UsernamePasswordAuthenticationToken(claims.get("userId"), "", authorities);
     }
 
     private Claims parseClaims(String token) {

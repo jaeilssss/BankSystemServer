@@ -36,7 +36,6 @@ public class DepositController {
 
     @PostMapping("/createDeposit")
     public Response<DepositResponse> createDeposit(@RequestBody CreateDeposit createDeposit) {
-
         return new Response<DepositResponse>(
                 APIResponseCode.OK,
                 APIResponseCode.OK_MESSAGE,
