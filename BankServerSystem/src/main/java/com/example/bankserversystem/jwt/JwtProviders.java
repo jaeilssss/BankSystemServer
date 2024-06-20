@@ -98,6 +98,11 @@ public class JwtProviders implements InitializingBean {
         return new UsernamePasswordAuthenticationToken(claims.get("userId"), "", authorities);
     }
 
+    public boolean checkTokenAndUserId(String accessToken, String userID) {
+        Claims claims = parseClaims(accessToken);
+        return claims.get("userId").equals(userID);
+    }
+
     private Claims parseClaims(String token) {
         try {
             return Jwts.parserBuilder()

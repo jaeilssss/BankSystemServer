@@ -1,11 +1,16 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.service.AccountService;
+import com.example.bankserversystem.dto.ErrorResponse;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.account.*;
 import com.example.bankserversystem.enums.APIResponseCode;
+import com.example.bankserversystem.exception.account.AccountException;
+import com.example.bankserversystem.exception.user.UserInfoException;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -62,6 +67,15 @@ public class AccountController {
                 APIResponseCode.OK,
                 APIResponseCode.OK_MESSAGE,
                 accountService.withdraw(accountMoneyRequest)
+        );
+    }
+
+    @ExceptionHandler(AccountException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleException(AccountException e, HttpServletRequest request) {
+        return new ErrorResponse(
+                e.getAccountCode().getMessage(),
+                e.getDetailMessage()
         );
     }
 }

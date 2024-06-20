@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.service.DepositService;
+import com.example.bankserversystem.dto.ErrorResponse;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.TransferResponse;
 import com.example.bankserversystem.dto.deposit.CreateDeposit;
@@ -8,6 +9,9 @@ import com.example.bankserversystem.dto.deposit.DepositResponse;
 import com.example.bankserversystem.dto.deposit.SignUpDepositRequest;
 import com.example.bankserversystem.entity.deposit.Deposit;
 import com.example.bankserversystem.enums.APIResponseCode;
+import com.example.bankserversystem.exception.account.AccountException;
+import com.example.bankserversystem.exception.deposit.DepositException;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -43,6 +47,13 @@ public class DepositController {
         );
     }
 
-
+    @ExceptionHandler(DepositException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleException(DepositException e, HttpServletRequest request) {
+        return new ErrorResponse(
+                e.getDepositCode().getMessage(),
+                e.getDetailMessage()
+        );
+    }
 
 }
