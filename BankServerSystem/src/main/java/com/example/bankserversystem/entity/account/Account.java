@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -37,6 +38,7 @@ public class Account {
 
     @Column(nullable = false)
     private String accountNumber;
+
     @Column(nullable = false)
     private String accountType;
 
@@ -46,6 +48,5 @@ public class Account {
     private LocalDateTime createdAt;
     @LastModifiedDate
     private LocalDateTime updatedAt;
-
 
 }

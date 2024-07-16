@@ -8,7 +8,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class CreateDeposit {
+public class CreateDepositRequest {
 
     private final String depositName;
 

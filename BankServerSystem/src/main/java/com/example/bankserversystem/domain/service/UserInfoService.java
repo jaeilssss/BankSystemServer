@@ -8,6 +8,7 @@ import com.example.bankserversystem.entity.user.DeleteUserInfo;
 import com.example.bankserversystem.entity.user.UserInfo;
 import com.example.bankserversystem.enums.UserInfoCode;
 import com.example.bankserversystem.exception.user.UserInfoException;
+import com.example.bankserversystem.globals.exception.MyException;
 import com.example.bankserversystem.jwt.JwtProviders;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -23,8 +24,6 @@ public class UserInfoService {
     private final DeleteUserInfoRepository deleteUserInfoRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtProviders jwtProviders;
-    private final AuthenticationManagerBuilder authenticationManagerBuilder;
-
 
     @Transactional
     public String login(String email, String password) {
@@ -33,7 +32,9 @@ public class UserInfoService {
         if (isPasswordMatch(password, userInfo.getPassword())) {
             return jwtProviders.createToken(email, userInfo.getUserId());
         } else {
-            throw new UserInfoException(UserInfoCode.INVALID_REQUEST);
+            throw new MyException(
+                    UserInfoCode.INVALID_REQUEST.getCode(),
+                    UserInfoCode.INVALID_REQUEST.getMessage());
         }
     }
     @Transactional
@@ -67,11 +68,15 @@ public class UserInfoService {
 
     private UserInfo findByEmail(String email) {
         return userInfoRepository.findByEmail(email)
-                .orElseThrow(() -> new UserInfoException(UserInfoCode.NO_USER_INFO));
+                .orElseThrow(() -> new MyException(
+                        UserInfoCode.NO_USER_INFO.getCode(),
+                        UserInfoCode.NO_USER_INFO.getMessage()));
     }
     private UserInfo getUserInfo(Long userId) {
         return  userInfoRepository.findById(userId)
-                .orElseThrow(() -> new UserInfoException(UserInfoCode.NO_USER_INFO));
+                .orElseThrow(() -> new MyException(
+                        UserInfoCode.NO_USER_INFO.getCode(),
+                        UserInfoCode.NO_USER_INFO.getMessage()));
     }
 
     @Transactional
@@ -86,7 +91,9 @@ public class UserInfoService {
 
     public void validateUserEmail(String email) {
         userInfoRepository.findByEmail(email).ifPresent(
-                (userInfo -> {throw new UserInfoException(UserInfoCode.DUPLICATED_EMAIL);}));
+                (userInfo -> {throw new MyException(
+                        UserInfoCode.DUPLICATED_EMAIL.getCode(),
+                        UserInfoCode.DUPLICATED_EMAIL.getMessage());}));
     }
 
     public boolean isPasswordMatch(String password, String encodedPassword) {

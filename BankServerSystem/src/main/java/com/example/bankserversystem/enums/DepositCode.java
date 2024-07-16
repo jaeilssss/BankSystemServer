@@ -7,8 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum DepositCode {
 
-    NO_DEPOSIT_DATA("No_deposit_data", "DEPOSIT-001");
+    NO_DEPOSIT_DATA("No_deposit_data");
 
     private final String message;
-    private final String code;
 }
