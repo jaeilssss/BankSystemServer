@@ -16,6 +16,7 @@ import com.example.bankserversystem.enums.UserInfoCode;
 import com.example.bankserversystem.exception.account.AccountException;
 import com.example.bankserversystem.exception.deposit.DepositException;
 import com.example.bankserversystem.exception.user.UserInfoException;
+import com.example.bankserversystem.globals.exception.MyException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -90,12 +91,16 @@ public class AccountService {
     @Transactional
     public Account getAccountByAccountNumber(String accountNumber) {
         return accountRepository.findByAccountNumber(accountNumber)
-                .orElseThrow(() -> new AccountException(AccountCode.NOT_FOUND_ACCOUNT_NUMBER));
+                .orElseThrow(() -> new MyException(
+                        AccountCode.NOT_FOUND_ACCOUNT_NUMBER.getCode(),
+                        AccountCode.NOT_FOUND_ACCOUNT_NUMBER.getMessage()));
     }
     @Transactional
     public Account getAccount(Long accountId) {
         return accountRepository.findById(accountId)
-                .orElseThrow(() -> new AccountException(AccountCode.NOT_FOUND_ACCOUNT_NUMBER));
+                .orElseThrow(() -> new MyException(
+                        AccountCode.NOT_FOUND_ACCOUNT_NUMBER.getCode(),
+                        AccountCode.NOT_FOUND_ACCOUNT_NUMBER.getMessage()));
     }
     @Transactional
     public UserInfo getUserInfo(Long userId) {
@@ -124,7 +129,6 @@ public class AccountService {
             count++;
             if(count==10) throw new AccountException(AccountCode.CRETE_ACCOUNT_ERROR);
         }
-        // 생년월일도 필요하지않을까?...
         accountRepository.save(makeAccount(userInfo, deposit, accountNumber));
     }
 

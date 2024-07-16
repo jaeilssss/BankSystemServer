@@ -2,10 +2,8 @@ package com.example.bankserversystem.domain.service;
 
 import com.example.bankserversystem.domain.repository.DepositRepository;
 import com.example.bankserversystem.domain.repository.UserInfoRepository;
-import com.example.bankserversystem.dto.Response;
-import com.example.bankserversystem.dto.deposit.CreateDeposit;
+import com.example.bankserversystem.dto.deposit.CreateDepositRequest;
 import com.example.bankserversystem.dto.deposit.DepositResponse;
-import com.example.bankserversystem.dto.deposit.SignUpDepositRequest;
 import com.example.bankserversystem.entity.deposit.Deposit;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -30,12 +28,12 @@ public class DepositService {
                 .collect(Collectors.toList());
     }
     @Transactional
-    public DepositResponse createDeposit(CreateDeposit createDeposit) {
+    public DepositResponse createDeposit(CreateDepositRequest createDeposit) {
         Deposit deposit = createDepositFromCreateDeposit(createDeposit);
         return DepositResponse.makeResponseFromEntity(depositRepository.save(deposit));
     }
 
-    private Deposit createDepositFromCreateDeposit(CreateDeposit createDeposit) {
+    private Deposit createDepositFromCreateDeposit(CreateDepositRequest createDeposit) {
         return Deposit.builder()
                 .depositName(createDeposit.getDepositName())
                 .interestRate(createDeposit.getInterestRate())

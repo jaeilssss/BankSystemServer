@@ -1,5 +1,6 @@
 package com.example.bankserversystem.entity.account;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -17,7 +18,6 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "account_history")
 public class AccountHistory {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,6 +27,10 @@ public class AccountHistory {
     private String historyMessage;
 
     private String type;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
     @CreatedDate
     private LocalDateTime createdAt;
