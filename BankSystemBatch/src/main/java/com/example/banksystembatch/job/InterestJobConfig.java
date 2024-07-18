@@ -78,7 +78,7 @@ public class InterestJobConfig {
     @Bean
     public ItemProcessor<Account, AccountHistory> interestItemProcessor() {
         return account -> {
-            double rate = account.getDeposit().getInterestRate();
+            double rate = account.getDeposit().getInterestRate() / 100;
             int totalInterest = (int) (account.getTotalDeposit()*rate + account.getTotalDeposit());
             account.setTotalDeposit(totalInterest);
             return account.createAccountHistoryForInterest((int)(account.getTotalDeposit()*rate));

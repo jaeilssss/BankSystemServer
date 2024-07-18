@@ -46,7 +46,7 @@ public class Account {
                 .type("이자입금")
                 .historyMessage(
                         totalDeposit + "에서" +"이자율 : " + deposit.getInterestRate() +
-                                "로 " + interest + "원의 이자가 입금되었습니다."
+                                "%로 " + interest + "원의 이자가 입금되었습니다."
                 )
                 .accountNumber(accountNumber)
                 .build();
