@@ -1,2 +1,2 @@
 # BankSystemServer
-<img width="1500" alt="Screenshot 2024-07-21 at 5 59 40 PM" src="https://github.com/user-attachments/assets/b048c78e-da9d-4370-a963-ab8156ed2765">
+<img width="1409" alt="Screenshot 2024-07-21 at 8 40 37 PM" src="https://github.com/user-attachments/assets/b38190f9-edd8-4ed0-9496-8c376ec8eda1">
