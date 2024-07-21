@@ -2,9 +2,11 @@ package com.example.bankserversystem.exception.deposit;
 
 import com.example.bankserversystem.enums.DepositCode;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
+@Getter
 public class DepositException extends RuntimeException{
 
     private DepositCode depositCode;

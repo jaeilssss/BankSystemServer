@@ -1,7 +1,10 @@
 package com.example.bankserversystem.jwt;
 
+import com.example.bankserversystem.domain.repository.UserInfoRepository;
+import com.example.bankserversystem.entity.user.UserInfo;
 import com.example.bankserversystem.enums.UserInfoCode;
 import com.example.bankserversystem.exception.user.UserInfoException;
+import com.example.bankserversystem.globals.exception.MyException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -32,6 +35,7 @@ public class JwtProviders implements InitializingBean {
     private final String secretKey;
     private final long tokenvalidityInMiliseconds;
     private Key key;
+    private UserInfoRepository userInfoRepository;
 
     public JwtProviders(
             @Value("${jwt.secretKey}") String secretKey,
@@ -89,13 +93,22 @@ public class JwtProviders implements InitializingBean {
             throw new RuntimeException("권한 정보가 없는 토큰 입니다.");
         }
 
+        UserInfo userInfo = userInfoRepository.findById((Long) claims.get("userId")).orElseThrow(
+                () -> new MyException(UserInfoCode.NO_USER_INFO.getCode(), UserInfoCode.NO_USER_INFO.getMessage())
+        );
+
         Collection<? extends GrantedAuthority> authorities =
                 Arrays.stream(claims.get("userId").toString().split(","))
                         .map(SimpleGrantedAuthority::new)
                         .collect(Collectors.toList());
 
         // UserDetails principal = new
-        return new UsernamePasswordAuthenticationToken(claims.get("userId"), "", authorities);
+        return new UsernamePasswordAuthenticationToken(userInfo, "", authorities);
+    }
+
+    public boolean checkTokenAndUserId(String accessToken, String userID) {
+        Claims claims = parseClaims(accessToken);
+        return claims.get("userId").equals(userID);
     }
 
     private Claims parseClaims(String token) {

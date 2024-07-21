@@ -47,10 +47,4 @@ public class UserInfo {
     @LastModifiedDate
     private LocalDateTime updatedDate;
 
-
-/*
-    @OneToMany
-    private List<Account> accountList;
-*/
-
 }
