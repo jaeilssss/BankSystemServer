@@ -43,13 +43,13 @@ public class AccountController extends BaseController {
         );
     }
 
+
+
     @PostMapping("/create/account")
     public Response<Void> createAccount(@RequestBody CreateAccountRequest createAccountRequest) {
         // request에 들어있는 UserId가 JWT에 있는 UserId와 일치한지 체크
         jwtAndUserIdCheck(createAccountRequest.getUserId());
-        accountService.createAccount(
-                createAccountRequest.getDepositId(),
-                createAccountRequest.getUserId());
+        accountService.createAccount(createAccountRequest);
         return new Response<>(
                 APIResponseCode.OK,
                 APIResponseCode.OK_MESSAGE
@@ -86,5 +86,6 @@ public class AccountController extends BaseController {
                 accountService.withdraw(accountMoneyRequest)
         );
     }
+
 
 }

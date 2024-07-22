@@ -9,5 +9,6 @@ public class AccountRequest {
 
     private Long depositId;
     private Long userId;
+    private final String accountPassword;
 
 }
