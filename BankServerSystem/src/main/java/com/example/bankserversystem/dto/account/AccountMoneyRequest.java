@@ -11,6 +11,6 @@ public class AccountMoneyRequest {
     private Long userId;
     private String accountNumber;
     private int depositMoney;
-
+    private String accountPassword;
 
 }
