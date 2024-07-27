@@ -40,6 +40,9 @@ public class Account {
     private String accountNumber;
 
     @Column(nullable = false)
+    private String accountPassword;
+
+    @Column(nullable = false)
     private String accountType;
 
     private int totalDeposit;

@@ -10,4 +10,5 @@ import lombok.Getter;
 public class CreateAccountRequest {
     private final Long depositId;
     private final Long userId;
+    private final String accountPassword;
 }
