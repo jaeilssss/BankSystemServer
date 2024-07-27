@@ -11,5 +11,5 @@ import java.util.Optional;
 @Repository
 public interface CardRepository extends JpaRepository<Card, Long> {
     List<Card> findByUserInfo(UserInfo userInfo);
-    Optional<Card> findByCardNumber(String cardNumber);
+    Optional<Card> findByCardNumber(int cardNumber);
 }

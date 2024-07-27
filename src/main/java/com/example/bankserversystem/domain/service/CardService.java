@@ -94,7 +94,7 @@ public class CardService {
                     CardErrorCode.NO_PROVIDE_OTHER_COMPANY.getCode(),
                     CardErrorCode.NO_PROVIDE_OTHER_COMPANY.getMessage());
     }
-    public Card getCardInfo(String cardNumber) {
+    public Card getCardInfo(int cardNumber) {
         return cardRepository.findByCardNumber(cardNumber).get();
     }
 
