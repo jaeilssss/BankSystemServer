@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class ChargeRequest {
 
     private String cardName;
-    private String cardNumber;
+    private int cardNumber;
     private String cardCompany;
     private String password;
     private LocalDate expirationDate;

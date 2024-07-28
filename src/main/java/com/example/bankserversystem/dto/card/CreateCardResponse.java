@@ -1,14 +1,12 @@
 package com.example.bankserversystem.dto.card;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Builder
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter @Setter
 public class CreateCardResponse {
 

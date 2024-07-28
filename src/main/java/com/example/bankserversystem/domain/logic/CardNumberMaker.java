@@ -22,9 +22,9 @@ public class CardNumberMaker {
     public int createCardNumber() {
         int count = 0;
         while (count < 10) {
-            String cardNumber = makeCardNumber();
+            int cardNumber = makeCardNumber();
             if(cardRepository.findByCardNumber(cardNumber).isEmpty())
-                return Integer.parseInt(cardNumber);
+                return cardNumber;
             count++;
         }
         throw new MyException(
@@ -32,11 +32,11 @@ public class CardNumberMaker {
                 CardErrorCode.CREATE_CARD_ERROR.getMessage());
     }
 
-    private String makeCardNumber() {
+    private int makeCardNumber() {
         StringBuilder newAccountNumber = new StringBuilder();
         newAccountNumber.append(DEBIT_CARD_NUMBER);
         newAccountNumber.append(makeCardBackNumber());
-        return newAccountNumber.toString();
+        return Integer.parseInt(newAccountNumber.toString());
     }
 
     private String makeCardBackNumber() {
