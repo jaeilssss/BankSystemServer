@@ -10,8 +10,7 @@ import java.time.LocalDate;
 @Getter @Setter
 public class CreateCardResponse {
 
-    private String userName;
-    private int cardNumber;
+    private String cardNumber;
     private LocalDate expirationDate;
     private String accountNumber;
     private String type;

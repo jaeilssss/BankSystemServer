@@ -15,14 +15,14 @@ import java.time.format.DateTimeFormatter;
 @RequiredArgsConstructor
 public class CardNumberMaker {
     private final CardRepository cardRepository;
-    private final String DEBIT_CARD_NUMBER = "111";
+    private final String DEBIT_CARD_NUMBER = "1";
 
 
     @Transactional
-    public int createCardNumber() {
+    public String createCardNumber() {
         int count = 0;
         while (count < 10) {
-            int cardNumber = makeCardNumber();
+            String cardNumber = makeCardNumber();
             if(cardRepository.findByCardNumber(cardNumber).isEmpty())
                 return cardNumber;
             count++;
@@ -32,15 +32,15 @@ public class CardNumberMaker {
                 CardErrorCode.CREATE_CARD_ERROR.getMessage());
     }
 
-    private int makeCardNumber() {
+    private String makeCardNumber() {
         StringBuilder newAccountNumber = new StringBuilder();
         newAccountNumber.append(DEBIT_CARD_NUMBER);
         newAccountNumber.append(makeCardBackNumber());
-        return Integer.parseInt(newAccountNumber.toString());
+        return newAccountNumber.toString();
     }
 
     private String makeCardBackNumber() {
-        return String.valueOf(getCurrentDateTimeToLong() + (long) (Math.random()*1000000L));
+        return String.valueOf(getCurrentDateTimeToLong() + (long) (Math.random()*100000L));
     }
     private Long getCurrentDateTimeToLong() {
         LocalDateTime localDateTime = LocalDateTime.now();

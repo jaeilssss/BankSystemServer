@@ -9,6 +9,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -17,6 +18,9 @@ import java.time.LocalDateTime;
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@EntityListeners(AuditingEntityListener.class)
+@DiscriminatorColumn(name = "dtype")
 public abstract class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +34,7 @@ public abstract class Card {
 
     @Column(nullable = false,
             unique = true)
-    protected int cardNumber;
+    protected String cardNumber;
     protected String cardCompany;
     protected String password;
 
@@ -45,10 +49,11 @@ public abstract class Card {
     abstract public CreateCardResponse createCardResponse();
     abstract public CardResponse toCardResponse();
 
-    protected void setCard(CreateCardRequest request, UserInfo userInfo, Account account, int cardNumber) {
+    protected void setCard(CreateCardRequest request, UserInfo userInfo, Account account, String cardNumber) {
         this.userInfo = userInfo;
         this.account = account;
         this.cardNumber = cardNumber;
+        this.password = request.getPassword();
         this.cardCompany = request.getCardCompany();
         LocalDate todayLocalDate = LocalDate.now();
         this.expirationDate = todayLocalDate.plusYears(5);
