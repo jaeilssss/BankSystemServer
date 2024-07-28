@@ -4,11 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca93ba03-7632-4336-9085-a0d302b8cd57" name="Changes" comment="" />
+    <list default="true" id="ca93ba03-7632-4336-9085-a0d302b8cd57" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/CardNumberMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/CardNumberMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/ChargeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/ChargeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/UserInfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/UserInfoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/DebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/DebitCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/enums/CardErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/enums/CardErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,8 +67,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle./Users/jaeiljeong/Documents/BankSystemServer/build.gradle.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BankServerSystemApplication.executor": "Run",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jaeiljeong/Documents/BankSystemServer",
@@ -48,6 +86,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="BankServerSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="BankServerSystem.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bankserversystem.BankServerSystemApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.bankserversystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BankServerSystemApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

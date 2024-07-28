@@ -8,10 +8,8 @@ import java.time.LocalDate;
 @Getter @Setter
 public class ChargeRequest {
 
-    private String cardName;
-    private int cardNumber;
+    private String cardNumber;
     private String cardCompany;
     private String password;
-    private LocalDate expirationDate;
     private int charge;
 }

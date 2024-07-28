@@ -8,6 +8,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserInfoRequest {
 
     private String email;

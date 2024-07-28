@@ -10,17 +10,22 @@ import com.example.bankserversystem.dto.card.CreateCardRequest;
 import com.example.bankserversystem.dto.card.CreateCardResponse;
 import com.example.bankserversystem.entity.account.Account;
 import com.example.bankserversystem.entity.card.Card;
+import com.example.bankserversystem.entity.card.DebitCard;
 import com.example.bankserversystem.entity.user.UserInfo;
 import com.example.bankserversystem.enums.AccountCode;
 import com.example.bankserversystem.enums.CardErrorCode;
 import com.example.bankserversystem.enums.UserInfoCode;
 import com.example.bankserversystem.globals.exception.MyException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.parameters.P;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -38,7 +43,7 @@ public class CardService {
 
     @Transactional
     public CreateCardResponse createCardResponse(CreateCardRequest cardRequest) {
-        int cardNumber = cardNumberMaker.createCardNumber();
+        String cardNumber = cardNumberMaker.createCardNumber();
         cardRequest.setPassword(encodePassword(cardRequest.getPassword()));
         Card card = cardRepository.save(cardRequest.toEntity(
                 cardRequest, getUserInfo(cardRequest.getUserId()),
@@ -74,6 +79,7 @@ public class CardService {
         validateCardCompany(chargeRequest.getCardCompany());
         Card card = getCardInfo(chargeRequest.getCardNumber());
 
+        validateExpiration(card.getExpirationDate());
         matchPassword(card.getPassword(), chargeRequest.getPassword());
         validateAccountTotalMoney(card.getAccount(), chargeRequest.getCharge());
 
@@ -88,13 +94,21 @@ public class CardService {
 
     }
 
+    public void validateExpiration(LocalDate cardExpirationDate) {
+        if(cardExpirationDate.isBefore(LocalDate.now()))
+            throw new MyException(
+                    CardErrorCode.INVALIDATE_EXPIRATION.getCode(),
+                    CardErrorCode.INVALIDATE_EXPIRATION.getMessage()
+            );
+    }
+
     public void validateCardCompany(String cardCompany) {
         if(!cardCompany.equals(MY_COMPANY_NAME))
             throw new MyException(
                     CardErrorCode.NO_PROVIDE_OTHER_COMPANY.getCode(),
                     CardErrorCode.NO_PROVIDE_OTHER_COMPANY.getMessage());
     }
-    public Card getCardInfo(int cardNumber) {
+    public Card getCardInfo(String cardNumber) {
         return cardRepository.findByCardNumber(cardNumber).get();
     }
 

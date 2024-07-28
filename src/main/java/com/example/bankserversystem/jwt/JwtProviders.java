@@ -35,8 +35,6 @@ public class JwtProviders implements InitializingBean {
     private final String secretKey;
     private final long tokenvalidityInMiliseconds;
     private Key key;
-    private UserInfoRepository userInfoRepository;
-
     public JwtProviders(
             @Value("${jwt.secretKey}") String secretKey,
             @Value("${jwt.expiration}") long tokenvalidityInMiliseconds) {
@@ -92,10 +90,7 @@ public class JwtProviders implements InitializingBean {
         if(claims.get("userId") == null) {
             throw new RuntimeException("권한 정보가 없는 토큰 입니다.");
         }
-
-        UserInfo userInfo = userInfoRepository.findById((Long) claims.get("userId")).orElseThrow(
-                () -> new MyException(UserInfoCode.NO_USER_INFO.getCode(), UserInfoCode.NO_USER_INFO.getMessage())
-        );
+        System.out.println(claims.get("userId"));
 
         Collection<? extends GrantedAuthority> authorities =
                 Arrays.stream(claims.get("userId").toString().split(","))
@@ -103,7 +98,7 @@ public class JwtProviders implements InitializingBean {
                         .collect(Collectors.toList());
 
         // UserDetails principal = new
-        return new UsernamePasswordAuthenticationToken(userInfo, "", authorities);
+        return new UsernamePasswordAuthenticationToken(claims.get("userId", Long.class), "", authorities);
     }
 
     public boolean checkTokenAndUserId(String accessToken, String userID) {

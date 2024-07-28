@@ -11,7 +11,8 @@ public enum CardErrorCode {
     NOT_ENOUGH_MONEY("Card_002", "잔액이 부족합니다"),
     CREATE_CARD_ERROR("Card_003","카드 생성에 실패했습니다. 다시 시도해주세요"),
     ERROR("Card_000", "에러가 발생했습니다."),
-    NOT_MATCH_PASSWORD("Card_004","비밀번호가 맞지 않습니다.");
+    NOT_MATCH_PASSWORD("Card_004","비밀번호가 맞지 않습니다."),
+    INVALIDATE_EXPIRATION("Card_005","카드 유효기간이 지났습니다");
 
     private final String code;
     private final String message;

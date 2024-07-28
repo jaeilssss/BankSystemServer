@@ -21,7 +21,7 @@ public class CreateCardRequest {
     private String type;
     private String accountNumber;
     private String accountPassword;
-    public Card toEntity(CreateCardRequest request, UserInfo userInfo, Account account, int accountNumber) {
+    public Card toEntity(CreateCardRequest request, UserInfo userInfo, Account account, String accountNumber) {
         if(type.equals("DebitCard")) {
            DebitCard debitCard = new DebitCard();
            debitCard.setDebitCard(request, userInfo, account, accountNumber);

@@ -22,12 +22,12 @@ public class JWTAndUserIdChecker {
     private final JwtProviders jwtProviders;
     public void check(Long userId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserInfo userInfo = (UserInfo) authentication.getPrincipal();
+        Long savedUserId = (Long) authentication.getPrincipal();
 
-        if(userInfo == null) throw new MyException(
+        if(savedUserId == null) throw new MyException(
                 BaseErrorCode.BAD_REQUEST.getCode(), BaseErrorCode.BAD_REQUEST.getMessage());
 
-        if(!userInfo.getUserId().equals(userId)) throw new MyException(
+        if(!savedUserId.equals(userId)) throw new MyException(
                 BaseErrorCode.BAD_REQUEST.getCode(), BaseErrorCode.BAD_REQUEST.getMessage());
 
     }
