@@ -18,8 +18,6 @@ import java.util.Objects;
 @Component
 @AllArgsConstructor
 public class JWTAndUserIdChecker {
-
-    private final JwtProviders jwtProviders;
     public void check(Long userId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Long savedUserId = (Long) authentication.getPrincipal();
@@ -29,6 +27,5 @@ public class JWTAndUserIdChecker {
 
         if(!savedUserId.equals(userId)) throw new MyException(
                 BaseErrorCode.BAD_REQUEST.getCode(), BaseErrorCode.BAD_REQUEST.getMessage());
-
     }
 }
