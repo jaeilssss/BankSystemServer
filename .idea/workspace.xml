@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca93ba03-7632-4336-9085-a0d302b8cd57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountHistoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/account/history/AccountHistoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/account/history/AccountHistoryRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1722091165283" duration="47000" />
       <workItem from="1722091214421" duration="113000" />
       <workItem from="1722558442765" duration="1878000" />
-      <workItem from="1722911027831" duration="729000" />
+      <workItem from="1722911027831" duration="8201000" />
     </task>
     <servers />
   </component>
