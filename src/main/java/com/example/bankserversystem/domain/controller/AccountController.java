@@ -33,7 +33,7 @@ public class AccountController extends BaseController {
 
 
     @GetMapping("/search/myaccount/{userId}")
-    public Response<List<AccountResponse>> getMyAccountList(@PathVariable Long userId) {
+    public Response<List<AccountResponse>> getMyAccountList(@PathVariable("userId") Long userId) {
         //userId와 토큰의 Id값을 비교
         jwtAndUserIdCheck(userId);
         return new Response<>(

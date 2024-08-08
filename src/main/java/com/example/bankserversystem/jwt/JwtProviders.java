@@ -90,8 +90,6 @@ public class JwtProviders implements InitializingBean {
         if(claims.get("userId") == null) {
             throw new RuntimeException("권한 정보가 없는 토큰 입니다.");
         }
-        System.out.println(claims.get("userId"));
-
         Collection<? extends GrantedAuthority> authorities =
                 Arrays.stream(claims.get("userId").toString().split(","))
                         .map(SimpleGrantedAuthority::new)

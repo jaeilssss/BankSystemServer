@@ -75,7 +75,6 @@ public class CardService {
 
     @Transactional
     public void charge(ChargeRequest chargeRequest) {
-
         validateCardCompany(chargeRequest.getCardCompany());
         Card card = getCardInfo(chargeRequest.getCardNumber());
 

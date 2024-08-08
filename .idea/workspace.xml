@@ -6,20 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ca93ba03-7632-4336-9085-a0d302b8cd57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/CardNumberMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/CardNumberMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/logic/JWTAndUserIdChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/CardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CardResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/ChargeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/ChargeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/card/CreateCardResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/UserInfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/user/UserInfoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/DebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/card/DebitCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/enums/CardErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/enums/CardErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/jwt/JwtProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/account/history/AccountHistoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/account/history/AccountHistoryRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,28 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle./Users/jaeiljeong/Documents/BankSystemServer/build.gradle.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BankServerSystemApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jaeiljeong/Documents/BankSystemServer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle./Users/jaeiljeong/Documents/BankSystemServer/build.gradle.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BankServerSystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jaeiljeong/Documents/BankSystemServer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BankServerSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="BankServerSystem.main" />
@@ -125,6 +115,8 @@
       <workItem from="1721565028821" duration="1825000" />
       <workItem from="1722091165283" duration="47000" />
       <workItem from="1722091214421" duration="113000" />
+      <workItem from="1722558442765" duration="1878000" />
+      <workItem from="1722911027831" duration="8201000" />
     </task>
     <servers />
   </component>
