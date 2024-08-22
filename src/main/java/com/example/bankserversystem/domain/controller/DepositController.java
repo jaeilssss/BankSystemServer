@@ -1,18 +1,13 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
-import com.example.bankserversystem.domain.service.DepositService;
-import com.example.bankserversystem.dto.ErrorResponse;
+import com.example.bankserversystem.domain.service.deposit.DepositServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.deposit.CreateDepositRequest;
 import com.example.bankserversystem.dto.deposit.DepositResponse;
 import com.example.bankserversystem.enums.APIResponseCode;
-import com.example.bankserversystem.exception.deposit.DepositException;
 import com.example.bankserversystem.globals.controller.BaseController;
-import jakarta.servlet.http.HttpServletRequest;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,11 +17,11 @@ import java.util.List;
 @RequestMapping("api/deposit")
 public class DepositController extends BaseController {
 
-    private final DepositService depositService;
+    private final DepositServiceImpl depositService;
 
     public DepositController(
             JWTAndUserIdChecker jwtAndUserIdChecker,
-            DepositService depositService) {
+            DepositServiceImpl depositService) {
         super(jwtAndUserIdChecker);
         this.depositService = depositService;
     }

@@ -1,7 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
-import com.example.bankserversystem.domain.service.CardService;
+import com.example.bankserversystem.domain.service.card.CardServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.card.CardResponse;
 import com.example.bankserversystem.dto.card.ChargeRequest;
@@ -9,9 +9,6 @@ import com.example.bankserversystem.dto.card.CreateCardRequest;
 import com.example.bankserversystem.dto.card.CreateCardResponse;
 import com.example.bankserversystem.enums.APIResponseCode;
 import com.example.bankserversystem.globals.controller.BaseController;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +17,10 @@ import java.util.List;
 @RestController
 @RequestMapping("api/card")
 public class CardController extends BaseController {
-    private final CardService cardService;
+    private final CardServiceImpl cardService;
 
     @Autowired
-    public CardController(JWTAndUserIdChecker jwtAndUserIdChecker, CardService cardService) {
+    public CardController(JWTAndUserIdChecker jwtAndUserIdChecker, CardServiceImpl cardService) {
         super(jwtAndUserIdChecker);
         this.cardService = cardService;
     }

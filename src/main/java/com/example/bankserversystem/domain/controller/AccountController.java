@@ -1,21 +1,13 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
-import com.example.bankserversystem.domain.service.AccountService;
-import com.example.bankserversystem.dto.ErrorResponse;
+import com.example.bankserversystem.domain.service.account.AccountServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.account.*;
 import com.example.bankserversystem.enums.APIResponseCode;
-import com.example.bankserversystem.exception.account.AccountException;
-import com.example.bankserversystem.exception.user.UserInfoException;
 import com.example.bankserversystem.globals.controller.BaseController;
-import com.example.bankserversystem.globals.enums.BaseErrorCode;
-import com.example.bankserversystem.globals.exception.MyException;
-import jakarta.servlet.http.HttpServletRequest;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,10 +15,10 @@ import java.util.List;
 @RestController
 @RequestMapping("api/account")
 public class AccountController extends BaseController {
-    private final AccountService accountService;
+    private final AccountServiceImpl accountService;
 
     @Autowired
-    public AccountController(AccountService accountService, JWTAndUserIdChecker jwtAndUserIdChecker) {
+    public AccountController(AccountServiceImpl accountService, JWTAndUserIdChecker jwtAndUserIdChecker) {
         super(jwtAndUserIdChecker);
         this.accountService = accountService;
     }

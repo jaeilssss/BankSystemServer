@@ -1,7 +1,6 @@
 package com.example.bankserversystem.domain.logic;
 
-import com.example.bankserversystem.domain.repository.CardRepository;
-import com.example.bankserversystem.entity.account.Account;
+import com.example.bankserversystem.domain.repository.card.CardRepository;
 import com.example.bankserversystem.enums.CardErrorCode;
 import com.example.bankserversystem.globals.exception.MyException;
 import lombok.RequiredArgsConstructor;
