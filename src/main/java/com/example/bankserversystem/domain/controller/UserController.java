@@ -1,20 +1,14 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
-import com.example.bankserversystem.domain.service.UserInfoService;
-import com.example.bankserversystem.dto.ErrorResponse;
+import com.example.bankserversystem.domain.service.userinfo.UserInfoServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.user.LoginRequest;
 import com.example.bankserversystem.dto.user.UserInfoRequest;
 import com.example.bankserversystem.dto.user.UserInfoResponse;
 import com.example.bankserversystem.enums.APIResponseCode;
-import com.example.bankserversystem.exception.user.UserInfoException;
 import com.example.bankserversystem.globals.controller.BaseController;
-import jakarta.servlet.http.HttpServletRequest;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -22,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/user")
 public class UserController extends BaseController {
 
-    private final UserInfoService userInfoService;
+    private final UserInfoServiceImpl userInfoService;
 
     public UserController(
             JWTAndUserIdChecker jwtAndUserIdChecker,
-            UserInfoService userInfoService) {
+            UserInfoServiceImpl userInfoService) {
         super(jwtAndUserIdChecker);
         this.userInfoService = userInfoService;
     }

@@ -7,9 +7,6 @@ public class APIResponseCode {
     public static String NO_DATA ="NO_DATA";
     public static String NOT_VALIDATE="NOT_VALIDATE";
 
-
-
-
     public static String OK_MESSAGE ="OK";
 
     // 유효한 정보가 없을 경우

@@ -1,24 +1,15 @@
 package com.example.bankserversystem.jwt;
 
-import com.example.bankserversystem.domain.repository.UserInfoRepository;
-import com.example.bankserversystem.entity.user.UserInfo;
-import com.example.bankserversystem.enums.UserInfoCode;
-import com.example.bankserversystem.exception.user.UserInfoException;
-import com.example.bankserversystem.globals.exception.MyException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
