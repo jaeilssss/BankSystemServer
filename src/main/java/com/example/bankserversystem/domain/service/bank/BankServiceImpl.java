@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -14,6 +15,7 @@ import java.util.List;
 public class BankServiceImpl implements BankService{
     private final BankRepository bankRepository;
     public List<BankResponse> getNearBank(Double lat, Double lon) {
-        return null;
+        return bankRepository.getNearBank(lat, lon)
+                .stream().map(BankResponse::toResponse).collect(Collectors.toList());
     }
 }
