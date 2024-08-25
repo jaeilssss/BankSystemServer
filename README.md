@@ -15,7 +15,7 @@
 
 ----------------------------------
 
-## 프로젝트 아키텍쳐
+## 시스템 아키텍처
 <img width="1360" alt="Screenshot 2024-08-22 at 11 57 51 PM" src="https://github.com/user-attachments/assets/faccd8a7-b605-4d39-aaa3-c41ebbed33c7">
 
 
