@@ -1,12 +1,11 @@
 # BankSystemServer
 
 ## 프로젝트 소개
-* **Backend** : Spring Boot 3.2.5
+* **Tech** : Spring Boot 3.2.5, Spring data JPA, Spring Security, QueryDSL
 * **Server** : Amazon EC2
-* **Libraries** : Spring data JPA, Spring Security , QueryDSL
 * **Database** : PostgreSQL
 * **Language** : Java
-* **ETC** : Jenkins
+* **ETC** : Lombok, Jenkins
 
 -------------------------------
 
