@@ -26,7 +26,7 @@ public class AccountHistoryController extends BaseController {
         this.accountHistoryService = accountHistoryService;
     }
 
-    @GetMapping("/test")
+    @GetMapping("/get/histogry")
     public Response<List<AccountHistoryResponse>> getMyAccountHistory(@RequestBody AccountHistoryRequest request) {
         jwtAndUserIdCheck(request.getUserId());
         return new Response<>(
