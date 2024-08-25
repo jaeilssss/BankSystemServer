@@ -3,7 +3,7 @@
 ## 프로젝트 소개
 * **Backend** : Spring Boot 3.2.5
 * **Server** : Amazon EC2
-* **Libraries** : Spring data JPA, Spring Security , JWT
+* **Libraries** : Spring data JPA, Spring Security , QueryDSL
 * **Database** : PostgreSQL
 * **Language** : Java
 * **ETC** : Jenkins
