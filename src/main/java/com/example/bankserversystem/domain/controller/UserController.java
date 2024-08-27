@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
+import com.example.bankserversystem.domain.service.userinfo.UserInfoService;
 import com.example.bankserversystem.domain.service.userinfo.UserInfoServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.user.LoginRequest;
@@ -16,17 +17,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/user")
 public class UserController extends BaseController {
 
-    private final UserInfoServiceImpl userInfoService;
+    private final UserInfoService userInfoService;
 
     public UserController(
             JWTAndUserIdChecker jwtAndUserIdChecker,
-            UserInfoServiceImpl userInfoService) {
+            UserInfoService userInfoService) {
         super(jwtAndUserIdChecker);
         this.userInfoService = userInfoService;
     }
 
     @PostMapping("/signup")
     public Response<UserInfoResponse> signUp(@RequestBody UserInfoRequest userInfoRequest) {
+        System.out.println("signUP!!!");
         return new Response<UserInfoResponse>(
                 APIResponseCode.OK,
                 APIResponseCode.OK_MESSAGE,

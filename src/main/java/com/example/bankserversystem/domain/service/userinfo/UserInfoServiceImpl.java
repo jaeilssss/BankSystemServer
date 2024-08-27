@@ -7,9 +7,11 @@ import com.example.bankserversystem.dto.user.UserInfoResponse;
 import com.example.bankserversystem.entity.user.DeleteUserInfo;
 import com.example.bankserversystem.entity.user.UserInfo;
 import com.example.bankserversystem.enums.UserInfoCode;
+import com.example.bankserversystem.exception.user.UserInfoException;
 import com.example.bankserversystem.globals.exception.MyException;
 import com.example.bankserversystem.jwt.JwtProviders;
 import jakarta.transaction.Transactional;
+import jdk.jshell.spi.ExecutionControl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -37,13 +39,17 @@ public class UserInfoServiceImpl implements UserInfoService{
     }
     @Transactional
     public UserInfoResponse signUp(UserInfoRequest userInfoRequest) {
-        //이미 가입된 이메일이 있을 경우 UserInfoException 발생
-        validateUserEmail(userInfoRequest.getEmail());
-        String passwordEncode = passwordEncoder.encode(userInfoRequest.getPassword());
+        try {
+            //이미 가입된 이메일이 있을 경우 UserInfoException 발생
+            validateUserEmail(userInfoRequest.getEmail());
+            String passwordEncode = passwordEncoder.encode(userInfoRequest.getPassword());
 
-        UserInfo createdUserInfo = createEntityFromRequest(userInfoRequest);
-        createdUserInfo.setPassword(passwordEncode);
-        return UserInfoResponse.makeResponseFromEntity(userInfoRepository.save(createdUserInfo));
+            UserInfo createdUserInfo = createEntityFromRequest(userInfoRequest);
+            createdUserInfo.setPassword(passwordEncode);
+            return UserInfoResponse.makeResponseFromEntity(userInfoRepository.save(createdUserInfo));
+        } catch (Exception e) {
+            throw new MyException(UserInfoCode.INVALID_REQUEST.getCode(), UserInfoCode.INVALID_REQUEST.getMessage());
+        }
     }
 
     @Transactional
