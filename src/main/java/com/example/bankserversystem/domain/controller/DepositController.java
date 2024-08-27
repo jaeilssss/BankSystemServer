@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
+import com.example.bankserversystem.domain.service.deposit.DepositService;
 import com.example.bankserversystem.domain.service.deposit.DepositServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.deposit.CreateDepositRequest;
@@ -17,11 +18,11 @@ import java.util.List;
 @RequestMapping("api/deposit")
 public class DepositController extends BaseController {
 
-    private final DepositServiceImpl depositService;
+    private final DepositService depositService;
 
     public DepositController(
             JWTAndUserIdChecker jwtAndUserIdChecker,
-            DepositServiceImpl depositService) {
+            DepositService depositService) {
         super(jwtAndUserIdChecker);
         this.depositService = depositService;
     }

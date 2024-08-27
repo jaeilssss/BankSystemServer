@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.repository.bank;
 
 import com.example.bankserversystem.domain.logic.GeometryPoint;
+import com.example.bankserversystem.dto.bank.CreateBankRequest;
 import com.example.bankserversystem.entity.bank.Bank;
 import com.example.bankserversystem.entity.bank.QBank;
 import com.querydsl.core.types.dsl.BooleanExpression;

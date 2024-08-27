@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
+import com.example.bankserversystem.domain.service.card.CardService;
 import com.example.bankserversystem.domain.service.card.CardServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.card.CardResponse;
@@ -17,10 +18,10 @@ import java.util.List;
 @RestController
 @RequestMapping("api/card")
 public class CardController extends BaseController {
-    private final CardServiceImpl cardService;
+    private final CardService cardService;
 
     @Autowired
-    public CardController(JWTAndUserIdChecker jwtAndUserIdChecker, CardServiceImpl cardService) {
+    public CardController(JWTAndUserIdChecker jwtAndUserIdChecker, CardService cardService) {
         super(jwtAndUserIdChecker);
         this.cardService = cardService;
     }

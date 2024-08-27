@@ -16,7 +16,7 @@ spring:
         hbm2ddl:
           auto: update
 server:
-  port: 8082
+  port: 8080
 ---
 spring:
 #  h2:

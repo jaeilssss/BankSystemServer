@@ -1,5 +1,6 @@
 package com.example.bankserversystem.domain.repository.bank;
 
+import com.example.bankserversystem.dto.bank.CreateBankRequest;
 import com.example.bankserversystem.entity.bank.Bank;
 
 import java.util.List;

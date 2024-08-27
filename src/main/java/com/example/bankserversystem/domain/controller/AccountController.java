@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
+import com.example.bankserversystem.domain.service.account.AccountService;
 import com.example.bankserversystem.domain.service.account.AccountServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.account.*;
@@ -15,10 +16,10 @@ import java.util.List;
 @RestController
 @RequestMapping("api/account")
 public class AccountController extends BaseController {
-    private final AccountServiceImpl accountService;
+    private final AccountService accountService;
 
     @Autowired
-    public AccountController(AccountServiceImpl accountService, JWTAndUserIdChecker jwtAndUserIdChecker) {
+    public AccountController(AccountService accountService, JWTAndUserIdChecker jwtAndUserIdChecker) {
         super(jwtAndUserIdChecker);
         this.accountService = accountService;
     }

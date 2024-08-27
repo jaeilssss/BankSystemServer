@@ -1,6 +1,7 @@
 package com.example.bankserversystem.domain.controller;
 
 import com.example.bankserversystem.domain.logic.JWTAndUserIdChecker;
+import com.example.bankserversystem.domain.service.account.AccountHistoryService;
 import com.example.bankserversystem.domain.service.account.AccountHistoryServiceImpl;
 import com.example.bankserversystem.dto.Response;
 import com.example.bankserversystem.dto.account.history.AccountHistoryRequest;
@@ -16,11 +17,11 @@ import java.util.List;
 @RequestMapping("api/account/history")
 public class AccountHistoryController extends BaseController {
 
-    private final AccountHistoryServiceImpl accountHistoryService;
+    private final AccountHistoryService accountHistoryService;
 
     @Autowired
     public AccountHistoryController(
-            AccountHistoryServiceImpl accountHistoryService,
+            AccountHistoryService accountHistoryService,
             JWTAndUserIdChecker jwtAndUserIdChecker) {
         super(jwtAndUserIdChecker);
         this.accountHistoryService = accountHistoryService;

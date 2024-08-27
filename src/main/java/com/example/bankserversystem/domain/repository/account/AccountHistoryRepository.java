@@ -8,8 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public interface AccountHistoryRepository extends JpaRepository<AccountHistory, Long>, AccountRepositoryCustom {
+public interface AccountHistoryRepository extends JpaRepository<AccountHistory, Long>, AccountHistoryRepositoryCustom {
 
 
 }

@@ -47,6 +47,7 @@ public class CardServiceImpl implements CardService{
                 ));
         return card.createCardResponse();
     }
+    @Override
     public List<CardResponse> getCardList(Long userId) {
         return cardRepository.findByUserInfo(getUserInfo(userId))
                 .stream()

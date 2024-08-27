@@ -54,6 +54,8 @@ dependencies {
     implementation 'org.hibernate:hibernate-core:6.4.0.Final'
     implementation 'org.hibernate:hibernate-spatial:6.4.0.Final'
 
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.0' // Jackson 버전에 맞는 최신 버전 사용
+
     //webclient
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
 

@@ -1,5 +1,7 @@
 package com.example.bankserversystem.entity.bank;
 
+import com.example.bankserversystem.domain.logic.GeometryPoint;
+import com.example.bankserversystem.dto.bank.CreateBankRequest;
 import com.example.bankserversystem.entity.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,4 +27,11 @@ public class Bank extends AbstractEntity {
 
     private Point location;
 
+    public void setBank(CreateBankRequest createBankRequest) {
+        this.bankName = createBankRequest.getBankName();
+        this.openTime = createBankRequest.getOpenTime();
+        this.closeTime = createBankRequest.getCloseTime();
+        this.location = GeometryPoint.createPoint(
+                createBankRequest.getLatitude(), createBankRequest.getLongitude());
+    }
 }
