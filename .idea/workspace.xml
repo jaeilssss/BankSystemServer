@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca93ba03-7632-4336-9085-a0d302b8cd57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/config/JacksonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/config/JpaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/dto/bank/CreateBankRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,76 +13,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/BankServerSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/BankServerSystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/AccountHistoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/AccountHistoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/BankController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/BankController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/CardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/DepositController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/DepositController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/logic/CardNumberMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/logic/CardNumberMaker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/AccountHistoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/AccountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/CardRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/DebitCardDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/DeleteAccountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/DeleteUserInfoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/DepositRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/UserInfoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/bank/BankRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/bank/BankRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustomImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustomImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/account/AccountHistoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/account/AccountHistoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/account/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/account/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/bank/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/bank/BankService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/bank/BankServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/bank/BankServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/card/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/card/CardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/card/CardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/card/CardServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/deposit/DepositServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/deposit/DepositServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/userinfo/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/domain/service/userinfo/UserInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/entity/bank/Bank$BankBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/entity/bank/Bank$BankBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/entity/bank/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/entity/bank/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/exception/jwt/JwtExceptionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/exception/jwt/JwtExceptionFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/jwt/JwtProviders.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/bankserversystem/jwt/JwtProviders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/bankserversystem/BankServerSystemApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/bankserversystem/BankServerSystemApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.bankserversystem.BankServerSystemApplicationTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/bankserversystem/controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/bankserversystem/controller/UserControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.bankserversystem.controller.UserControllerTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.bankserversystem.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.bankserversystem.BankServerSystemApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.bankserversystem.controller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.bankserversystem.controller.UserControllerTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AccountController.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AccountHistoryController.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BankController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BaseController.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CardController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DepositController.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JWTAndUserIdChecker.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserController.class.uniqueId7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/UserControllerTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/BankServerSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/BankServerSystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/AccountHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/BankController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/DepositController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/DepositController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/account/AccountHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/account/AccountHistoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/account/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/account/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/bank/BankRepositoryCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/card/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/card/CardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/deposit/DepositRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/deposit/DepositRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/userinfo/DeleteUserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/userinfo/DeleteUserInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/userinfo/UserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/repository/userinfo/UserInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/bank/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/bank/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/bank/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/bank/BankServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/card/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/card/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/card/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/card/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/userinfo/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/domain/service/userinfo/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/entity/bank/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/exception/jwt/JwtExceptionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bankserversystem/exception/jwt/JwtExceptionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/BankServerSystemApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/BankServerSystemApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bankserversystem/controller/UserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +49,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -142,6 +92,9 @@
     "Gradle.UserControllerTest.testLogin.executor": "Run",
     "Gradle.UserControllerTest.testSearch.executor": "Run",
     "Gradle.UserControllerTest.testSignUp.executor": "Run",
+    "Gradle.UserServiceTest.testLoginFailByEmptyUser.executor": "Run",
+    "Gradle.UserServiceTest.testLoginFailByNotMatchPassword.executor": "Run",
+    "Gradle.UserServiceTest.testLoginSuccess.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -178,7 +131,7 @@
       <recent name="com.example.bankserversystem.domain.logic" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserControllerTest">
+  <component name="RunManager" selected="Gradle.UserServiceTest.testLoginFailByEmptyUser">
     <configuration name="UserControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -193,30 +146,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.example.bankserversystem.controller.UserControllerTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserControllerTest.testLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.bankserversystem.controller.UserControllerTest.testLogin&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -251,7 +180,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserControllerTest.testSignUp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest.testLoginFailByEmptyUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -264,7 +193,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.bankserversystem.controller.UserControllerTest.testSignUp&quot;" />
+            <option value="&quot;com.example.bankserversystem.service.UserServiceTest.testLoginFailByEmptyUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -275,26 +204,61 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="BankServerSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="BankServerSystem.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bankserversystem.BankServerSystemApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.bankserversystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="UserServiceTest.testLoginFailByNotMatchPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.bankserversystem.service.UserServiceTest.testLoginFailByNotMatchPassword&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.testLoginSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.bankserversystem.service.UserServiceTest.testLoginSuccess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserControllerTest" />
+        <item itemvalue="Gradle.UserServiceTest.testLoginFailByEmptyUser" />
+        <item itemvalue="Gradle.UserServiceTest.testLoginFailByNotMatchPassword" />
+        <item itemvalue="Gradle.UserServiceTest.testLoginSuccess" />
         <item itemvalue="Gradle.UserControllerTest.testSearch" />
-        <item itemvalue="Gradle.UserControllerTest.testSignUp" />
-        <item itemvalue="Gradle.UserControllerTest.testLogin" />
-        <item itemvalue="Spring Boot.BankServerSystemApplication" />
+        <item itemvalue="Gradle.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +287,7 @@
       <workItem from="1723556290399" duration="3227000" />
       <workItem from="1724289004518" duration="9321000" />
       <workItem from="1724311300322" duration="2025000" />
-      <workItem from="1724317193492" duration="37834000" />
+      <workItem from="1724317193492" duration="43783000" />
     </task>
     <servers />
   </component>
